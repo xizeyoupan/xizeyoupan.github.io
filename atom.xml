@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2020-07-15T03:49:10.185Z</updated>
+  <updated>2020-07-18T08:00:53.546Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Padavan路由器上配置v2ray</title>
+    <link href="https://blog.2333332.xyz/2020/07/16/use-v2ray-on-padavan/"/>
+    <id>https://blog.2333332.xyz/2020/07/16/use-v2ray-on-padavan/</id>
+    <published>2020-07-16T13:00:22.000Z</published>
+    <updated>2020-07-18T08:00:53.546Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner: <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/82982250"  target="_blank" rel="noopener">pixiv</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h1 id="在电脑上将正常的节点导出为分享url"   >          <a href="#在电脑上将正常的节点导出为分享url" class="heading-link"><i class="fas fa-link"></i></a>在电脑上将正常的节点导出为分享URL</h1>      <p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/img%2Fblog%2F200716%2F1.jpg"  alt="" />      </p>        <h1 id="在padavan上的v2ray选项中导入节点"   >          <a href="#在padavan上的v2ray选项中导入节点" class="heading-link"><i class="fas fa-link"></i></a>在Padavan上的v2ray选项中导入节点</h1>      <p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/img%2Fblog%2F200716%2F2.jpg"  alt="" />      </p>        <h1 id="设置transocks"   >          <a href="#设置transocks" class="heading-link"><i class="fas fa-link"></i></a>设置transocks</h1>      <p><code>广告屏蔽功能</code>==<code>transocks</code>==开关打开<br /><code>透明重定向的代理服务器IP、域名</code> : <code>路由器的内网IP</code><br /><code>透明重定向的代理服务器端口</code> : v2ray界面的<code>本地代理端口</code><br /><code>远端服务器IP、域名</code> : v2ray节点的域名或者IP<br />其他保持默认即可。</p>        <h1 id="注意"   >          <a href="#注意" class="heading-link"><i class="fas fa-link"></i></a>注意</h1>      <p>路由器性能不行，慎用。</p>        <h1 id="参考"   >          <a href="#参考" class="heading-link"><i class="fas fa-link"></i></a>参考</h1>      <blockquote><p><span class="exturl"><a class="exturl__link"   href="https://233v2.com/post/padavan-v2ray"  target="_blank" rel="noopener">https://233v2.com/post/padavan-v2ray</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br /><span class="exturl"><a class="exturl__link"   href="https://opt.cn2qq.com/padavan"  target="_blank" rel="noopener">https://opt.cn2qq.com/padavan</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br /><span class="exturl"><a class="exturl__link"   href="https://sixu.life/padavan-v2ray.html"  target="_blank" rel="noopener">https://sixu.life/padavan-v2ray.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      本文使用H大的最新版固件。
+    
+    </summary>
+    
+    
+      <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+      <category term="v2ray" scheme="https://blog.2333332.xyz/tags/v2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>openmediavault 入门</title>
+    <link href="https://blog.2333332.xyz/2020/07/16/install-omv/"/>
+    <id>https://blog.2333332.xyz/2020/07/16/install-omv/</id>
+    <published>2020-07-16T07:45:51.000Z</published>
+    <updated>2020-07-18T07:58:20.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner : <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/82968220"  target="_blank" rel="noopener">pixiv</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h1 id="安装"   >          <a href="#安装" class="heading-link"><i class="fas fa-link"></i></a>安装</h1>      <p>参考<span class="exturl"><a class="exturl__link"   href="https://openmediavault.readthedocs.io/en/5.x/installation/index.html"  target="_blank" rel="noopener">这里</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。</p>        <h1 id="使用ssh连接"   >          <a href="#使用ssh连接" class="heading-link"><i class="fas fa-link"></i></a>使用ssh连接</h1>      <p>原本想用Vscode来试试，结果似乎不支持，只好作罢。但换成普通的ssh软件后，尝试非root用户登录，竟然会报<code>Permission denied, please try again.</code>?可明明密码是对的呀！？ <s>先用root登录吧。</s> 原因如下： <strong>需要在WEBUI中把用户加到<code>SSH</code>组中。</strong></p>        <h1 id="安装omv-extras"   >          <a href="#安装omv-extras" class="heading-link"><i class="fas fa-link"></i></a>安装omv-extras</h1>      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash</span><br></pre></td></tr></table></div></figure>        <h1 id="构建docker"   >          <a href="#构建docker" class="heading-link"><i class="fas fa-link"></i></a>构建docker</h1>      <p>非常麻烦，搞几个容器弄了一整天。<br />        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/img%2Fblog%2F200716%2Fcontainer.png"  alt="" />      <br />目前装了这几个用<code>caddy</code>来反代，实现远程访问。</p><ul><li><code>qbittorrent</code>需要在<code>WEBUI</code>中去掉勾选<code>点击劫持</code>和<code>CSRF保护</code>。</li><li><code>jellyfin</code>需要挂载设备就像这样<code>--device /dev/dri/renderD128:/dev/dri/renderD128 --device /dev/dri/card0:/dev/dri/card0</code>才能硬解。另外别忘了<code>apt-get install i965-va-driver</code>。</li><li><code>nectcloud</code>需要在<code>config/config.php</code>中设置<code>'overwriteprotocol' =&gt; 'https',</code>和<code>'trusted_proxies'</code>。</li></ul>        <h1 id="参考"   >          <a href="#参考" class="heading-link"><i class="fas fa-link"></i></a>参考</h1>      <blockquote><p><span class="exturl"><a class="exturl__link"   href="https://code.visualstudio.com/docs/remote/ssh"  target="_blank" rel="noopener">https://code.visualstudio.com/docs/remote/ssh</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br /><span class="exturl"><a class="exturl__link"   href="https://www.bilibili.com/video/BV1Ge41147B9"  target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Ge41147B9</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      一些流程。
+    
+    </summary>
+    
+    
+      <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+      <category term="linux" scheme="https://blog.2333332.xyz/tags/linux/"/>
+    
+      <category term="docker" scheme="https://blog.2333332.xyz/tags/docker/"/>
+    
+      <category term="nas" scheme="https://blog.2333332.xyz/tags/nas/"/>
+    
+      <category term="openmediavault" scheme="https://blog.2333332.xyz/tags/openmediavault/"/>
+    
+  </entry>
   
   <entry>
     <title>初探WSL2</title>
