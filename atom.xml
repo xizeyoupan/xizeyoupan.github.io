@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2021-02-10T16:06:20.250Z</updated>
+  <updated>2021-02-16T11:36:47.620Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>超方便的双向远程剪切板</title>
+    <link href="https://blog.2333332.xyz/2021/02/16/remote-clipboard/"/>
+    <id>https://blog.2333332.xyz/2021/02/16/remote-clipboard/</id>
+    <published>2021-02-16T11:04:48.000Z</published>
+    <updated>2021-02-16T11:36:47.620Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner：<span class="exturl"><a class="exturl__link"   href="https://netbears.com/blog/serverless-website/"  target="_blank" rel="noopener">https://netbears.com/blog/serverless-website/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h2 id="起源"   >          <a href="#起源" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#起源"></a> 起源</h2>      <p>在某两个设备之间时常会传递一小段文本，但苦于没有足够优雅的方式来解决，找了找网上好像缺少现成的轮子，故尝试自己撸一个。</p>        <h2 id="项目进度"   >          <a href="#项目进度" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#项目进度"></a> 项目进度</h2>      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir remote-clipboard</span><br></pre></td></tr></table></div></figure>        <h2 id="to-be-continued"   >          <a href="#to-be-continued" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#to-be-continued"></a> to be continued…</h2>      ]]></content>
+    
+    <summary type="html">
+    
+      解决了多设备使用中的某个痛点。
+    
+    </summary>
+    
+    
+      <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
+      <category term="python" scheme="https://blog.2333332.xyz/tags/python/"/>
+    
+      <category term="flask" scheme="https://blog.2333332.xyz/tags/flask/"/>
+    
+      <category term="javascript" scheme="https://blog.2333332.xyz/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>就NM离谱</title>
