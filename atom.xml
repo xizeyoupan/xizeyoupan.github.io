@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2021-03-07T06:53:23.380Z</updated>
+  <updated>2021-03-07T07:32:52.220Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.2333332.xyz/2021/03/07/v/"/>
     <id>https://blog.2333332.xyz/2021/03/07/v/</id>
     <published>2021-03-07T06:17:16.000Z</published>
-    <updated>2021-03-07T06:53:23.380Z</updated>
+    <updated>2021-03-07T07:32:52.220Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><p><meting-js    name="龍驤"artist="RyujoPad"url="https://xjc.cn-sh2.ufileos.com/img/blog/210307/mp.mp3"cover="https://xjc.cn-sh2.ufileos.com/img/blog/210307/cy.jpg"lrc= "https://xjc.cn-sh2.ufileos.com/img/blog/210307/lrc.lrc"><br /></meting-js></p>]]></content>
+    <content type="html"><![CDATA[<div id="player1" class="aplayer"><pre class="aplayer-lrc-content">[00:00.32]深夜里忽然感觉那本[00:02.67]C语言的教材[00:04.24]绿色的封面诱使人发呆[00:07.63]我思念 年轻时的那一瞬间[00:10.92]在不知不觉消失 我眼前[00:15.55]人世不如意 且行且珍惜[00:40.28]江南的天气已然到了深冬[00:43.78]可反常气候却让隆冬[00:45.87]仿佛晓春[00:47.44]刚刚敲完学校发的集训[00:50.84]不禁自我怀疑[00:55.22]假期是让人催懒的奇妙东西[00:58.26]突然诧异有人辞公离职而去[01:01.91]敢问多少人有勇气和魄力[01:05.53]说走就放弃[01:09.49]啊 多希望舰娘圈子[01:12.21]重返美好本质不再乌烟瘴气[01:16.39]啊 多希望魔怔一年[01:19.52]变成回忆如往昔[01:23.44]意识之形态 团体在对立[01:26.31]思想又斗争[01:28.15]被迫选择远离[01:30.25]心 那样近 魂牵梦萦[01:33.39]却 海角天边[01:37.39]敢离开铁饭碗的魄力[01:39.48]又使我想起[01:41.49]相信未来的我自己[01:44.28]我思念[01:45.72]外公当时念的叨絮[01:46.90]在不知不觉坚定[01:48.72]不再犹豫[01:51.34]某一天我若执意冲击我的兴趣[01:54.73]管它有无不错待遇[01:56.82]围城若隐若现[01:58.49]我会怕慢慢走近那一瞬间</pre></div>   <script>var ap = new APlayer({    container: document.getElementById('player1'),    lrcType:2,    audio: [{        name: '龍驤',        artist: 'RyujoPad',        url:"https://xjc.cn-sh2.ufileos.com/img/blog/210307/mp.mp3",    cover:"https://xjc.cn-sh2.ufileos.com/img/blog/210307/cy.jpg",    }]});</script>]]></content>
     
     <summary type="html">
     
@@ -83,11 +83,11 @@
       <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
     
     
+      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
       <category term="python" scheme="https://blog.2333332.xyz/tags/python/"/>
     
       <category term="flask" scheme="https://blog.2333332.xyz/tags/flask/"/>
-    
-      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
     
       <category term="javascript" scheme="https://blog.2333332.xyz/tags/javascript/"/>
     
@@ -217,11 +217,11 @@
       <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
     
     
-      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
-    
       <category term="parsec" scheme="https://blog.2333332.xyz/tags/parsec/"/>
     
       <category term="串流" scheme="https://blog.2333332.xyz/tags/%E4%B8%B2%E6%B5%81/"/>
+    
+      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
     
   </entry>
   
