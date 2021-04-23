@@ -138,7 +138,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
         <img   class="lazyload lazyload-gif"
           src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/img%2Fblog%2F200209%2Fpingspeed.png"  alt="" />
       </p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/blog/">blog</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/02/15/blender-note/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Blender学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/29/it-is-a-test/"><span class="paginator-prev__text">这是一篇测试文章</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1选一个托管博客的平台"><span class="toc-number">1.</span> <span class="toc-text">
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/blog/">blog</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/02/15/blender-note/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Blender学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/29/it-is-a-test/"><span class="paginator-prev__text">这是一篇测试文章</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="waline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1选一个托管博客的平台"><span class="toc-number">1.</span> <span class="toc-text">
            1.选一个托管博客的平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2选一个合适自己的主题"><span class="toc-number">2.</span> <span class="toc-text">
            2.选一个合适自己的主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三条内容已过时目前主题使用平稳"><span class="toc-number">3.</span> <span class="toc-text">
            第三条内容已过时，目前主题使用平稳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3配置-修改主题"><span class="toc-number">4.</span> <span class="toc-text">
@@ -491,32 +491,29 @@ if (Array.isArray(assistSearchList)) {
       }
     }
   }, false);
-}, false);</script><div id="pjax-reload"><link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css"><script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script></div><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script data-pjax="">function loadValine () {
+}, false);</script><div id="pjax-reload"><link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css"><script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script></div><script src="https://unpkg.com/@waline/client/dist/Waline.min.js"></script><script data-pjax="">function loadWaline () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
   guest_info = guest_info.split(',').filter(function(item) {
     return GUEST_INFO.indexOf(item) > -1;
   });
-  new Valine({
-    el: '#valine-container',
-    appId: 'cdwFnwyS7EfWMGaI957hv3Fc-MdYXbMMI',
-    appKey: 'lotln0LnSgMNtrne7TltqL84',
-    notify: true,
-    verify: true,
+
+  new Waline({
+    el: '#waline-container',
+    serverURL: 'https://waline-api-henna.vercel.app',
     placeholder: 'Just go go',
-    avatar: 'mp',
-    meta: guest_info,
     pageSize: '10' || 10,
-    visitor: false,
-    recordIP: true,
     lang: '' || 'zh-cn',
-    path: window.location.pathname
+    visitor: false,
+    avatar: 'mp',
+    path: window.location.pathname,
+    meta: guest_info
   });
 }
 
 if (true) {
-  loadValine();
+  loadWaline();
 } else {
-  window.addEventListener('DOMContentLoaded', loadValine, false);
+  window.addEventListener('DOMContentLoaded', loadWaline, false);
 }</script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script><script type="application/json" src="/search.json"></script><script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"jsonPath":"https://cdn.jsdelivr.net/npm/live2d-widget-model-mashiro-seifuku@1.0.1/assets/seifuku.model.json"},"display":{"position":"right","width":240,"height":480,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body></html>
