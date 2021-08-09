@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2021-08-03T09:22:52.110Z</updated>
+  <updated>2021-08-09T00:04:55.588Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我打算这学期入门机器学习这件事</title>
+    <link href="https://blog.2333332.xyz/2021/08/09/start-ml/"/>
+    <id>https://blog.2333332.xyz/2021/08/09/start-ml/</id>
+    <published>2021-08-08T23:34:20.000Z</published>
+    <updated>2021-08-09T00:04:55.588Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner : <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/91609020"  target="_blank" rel="noopener">pixiv</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p><!-- # 序# 灼眼的项目# Re:从零开始的炼丹生活# 蒟弱的工作！# 摸鱼科大学的劣等生# 炼丹用书目录# 我的GPU很少# 在老师给的数据集中训练是否搞错了什么# 果然我的训练参数搞错了# 我们的重置数据# No Hypothesis No Loss# 我的拟合度哪有这么可笑！# 欢迎来到算力至上主义的教室# 为下学期的满课献上祝福！# 后记 -->]]></content>
+    
+    <summary type="html">
+    
+      「关于加个引号就能变成轻小说标题这件事」
+    
+    </summary>
+    
+    
+      <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+      <category term="机器学习" scheme="https://blog.2333332.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="python" scheme="https://blog.2333332.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>21年中</title>
@@ -37,9 +62,9 @@
     
       <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="gal" scheme="https://blog.2333332.xyz/tags/gal/"/>
     
@@ -112,11 +137,11 @@
       <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
     
     
+      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
       <category term="python" scheme="https://blog.2333332.xyz/tags/python/"/>
     
       <category term="flask" scheme="https://blog.2333332.xyz/tags/flask/"/>
-    
-      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
     
       <category term="javascript" scheme="https://blog.2333332.xyz/tags/javascript/"/>
     
@@ -167,9 +192,9 @@
     
       <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -246,11 +271,11 @@
       <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
     
     
-      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
-    
       <category term="parsec" scheme="https://blog.2333332.xyz/tags/parsec/"/>
     
       <category term="串流" scheme="https://blog.2333332.xyz/tags/%E4%B8%B2%E6%B5%81/"/>
+    
+      <category term="远程" scheme="https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/"/>
     
   </entry>
   
@@ -275,9 +300,9 @@
     
       <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
