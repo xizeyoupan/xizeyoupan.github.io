@@ -628,7 +628,7 @@ body::after {
   position: fixed;
   height: 100vh;
   z-index: -2;
-  background: url("https://xjc.cn-sh2.ufileos.com/img%2Fsite%2Fbackground.png") no-repeat center/cover;
+  background: url("https://xjc.cn-sh2.ufileos.com/assets/site/background.png") no-repeat center/cover;
 }
 body::before {
   content: '';
@@ -949,7 +949,7 @@ body::before {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: url("https://xjc.cn-sh2.ufileos.com/img%2Fsite%2Fheader.jpg") no-repeat center/cover;
+  background: url("https://xjc.cn-sh2.ufileos.com/assets/site/header.jpg") no-repeat center/cover;
 }
 .header-banner::before {
   content: '';
@@ -1001,7 +1001,7 @@ body::before {
   color: #f5f6f7;
   background-color: #2d2e30;
   z-index: 0;
-  background: url("https://xjc.cn-sh2.ufileos.com/img/site/ftbg.png") no-repeat center/cover;
+  background: url("https://xjc.cn-sh2.ufileos.com/assets/site/ftbg.png") no-repeat center/cover;
 }
 .footer-inner::before {
   content: '';
@@ -1121,9 +1121,9 @@ body::before {
   height: 120px;
 }
 .sidebar-ov-author__avatar_img {
-  opacity: 0.7;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-  filter: alpha(opacity=70);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
   border-radius: 50%;
 }
 .sidebar-ov-author__avatar:hover .sidebar-ov-author__avatar_img {
@@ -2186,8 +2186,29 @@ body::before {
 .back2top__icon:hover {
   color: #fc6423;
 }
-a.fancybox {
+.zoomimg-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.zoomimg {
   cursor: zoom-in;
+}
+.zoomimg--hide {
+  visibility: hidden;
+}
+.zoomimg-clone {
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  cursor: zoom-out;
 }
 .lazyload-block {
   -webkit-box-sizing: content-box;
@@ -2686,18 +2707,6 @@ a.fancybox {
 .friends-plugin__item-info__intro {
   font-size: 0.9em;
   color: #999;
-}
-.busuanzi-siteuv__icon,
-.busuanzi-sitepv__icon,
-.busuanzi-siteuv__info,
-.busuanzi-sitepv__info,
-.busuanzi-siteuv__value,
-.busuanzi-sitepv__value {
-  margin: 0 2px;
-}
-.busuanzi > span:nth-child(2)::before {
-  content: '|';
-  margin: 0 10px;
 }
 @media (min-width: 1138px) {
   .header-nav-inner {

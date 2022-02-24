@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="记一次博客CI化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Only My Markdown">
+<meta property="og:url" content="https://blog.2333332.xyz/2022/02/23/2022-02-23-write-blog-with-ci/index.html">
+<meta property="og:site_name" content="Krypton&#39;s Blog">
+<meta property="og:description" content="记一次博客CI化">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/banner.jpg">
+<meta property="article:published_time" content="2022-02-23T19:02:08.000Z">
+<meta property="article:modified_time" content="2022-02-23T19:02:08.000Z">
+<meta property="article:author" content="Krypton">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="github action">
+<meta property="article:tag" content="CI">
+<meta property="article:tag" content="Vercel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/banner.jpg"><title>Only My Markdown | Krypton's Blog</title><link ref="canonical" href="https://blog.2333332.xyz/2022/02/23/2022-02-23-write-blog-with-ci/"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://unpkg.com"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=UA-132388937-1" async="" data-pjax=""></script><script data-pjax="">if (window.location.hostname !== 'localhost') {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-132388937-1');
+}</script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: true,
+  pjax: {"avoidBanner":false},
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css"><script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script><script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script><meting-js server="netease" type="playlist" id="3214713665" fixed="true"></meting-js><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-address-book"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Only My Markdown</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-02-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-02-23</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.6k</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2022/02/23/2022-02-23-write-blog-with-ci/" data-flag-title="Only My Markdown"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value leancloud-visitors-count"></span></span></div></header><div class="post-body"><div class="gallery"><img src="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/banner.jpg"></div><p>banner：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.pixiv.net/artworks/90496169" >https://www.pixiv.net/artworks/90496169</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="前言-2"   >
+          <a href="#前言-2" class="heading-link"><i class="fas fa-link"></i></a>前言</h2>
+      
+<p>上学期小新的HDMI接口突然坏了，我想着用 USB Hub顶用一下就算了。寒假里直接狗东返厂换了一块主板——收到返件的时候我内心是什么慌张的——发现没有被调包成爱国者主板<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>后，才稍稍有些放心。测试了一下后顺带重装了系统。众所周知，重装系统后的环境搭建十分烦人，特别是对于Hexo这种框架。但不可否认的是，已经拥有和想要有一个博客的人似乎很多，不管出于什么原因<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，但是很多时候我们都想偷个懒，光是写博客已经绞尽脑汁了，搭建一个博客并个性化，这种复杂度足以使一位211大学的高材生专注于集训<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>而拖延。</p>
+<p>那么用上CI后，这种情况是否会有所改观？本文以Hexo的Stun为例，记录了从0开始搭建一个博客并魔改上CI自动部署的内容。<br>
+<em>注意：阅读以下文本需要相关基础。</em></p>
+
+        <h2 id="环境要求"   >
+          <a href="#环境要求" class="heading-link"><i class="fas fa-link"></i></a>环境要求</h2>
+      
+<p>理论上只需要Git，开发时可能需要其他工具，如node。</p>
+
+        <h2 id="先前准备"   >
+          <a href="#先前准备" class="heading-link"><i class="fas fa-link"></i></a>先前准备</h2>
+      
+<p>按照网上一大堆的教程装好Hexo和主题，粗略配置即可，不再赘述。新建一篇post并启动server以验证安装是否成功。</p>
+
+        <h2 id="删减文件夹并编写action脚本"   >
+          <a href="#删减文件夹并编写action脚本" class="heading-link"><i class="fas fa-link"></i></a>删减文件夹并编写action脚本</h2>
+      
+<p>经过一番折腾我们的文件夹结构可能会像这样（省略了<code>node_modules</code>）：</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">├── .github</span><br><span class="line">│   └── dependabot.yml</span><br><span class="line">├── .gitignore</span><br><span class="line">├── _config.landscape.yml</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">│   ├── draft.md</span><br><span class="line">│   ├── page.md</span><br><span class="line">│   └── post.md</span><br><span class="line">├── source</span><br><span class="line">│   └── _posts</span><br><span class="line">└── themes</span><br><span class="line">    ├── .gitkeep</span><br><span class="line">    └── stun</span><br></pre></td></tr></table></div></figure>
+<p>如果有CI的话，用不到这么多一堆文件夹。把多余的文件都删掉，变成：</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── _config.yml            # Hexo 站点配置</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json           # 项目清单</span><br><span class="line">├── source                 # blog 数据文件夹</span><br><span class="line">│   └── _posts</span><br><span class="line">│       └── hello-world.md</span><br><span class="line">└── themes</span><br><span class="line">    └── stun</span><br><span class="line">        └── _config.yml    # 主题配置</span><br></pre></td></tr></table></div></figure>
+<p>为了下一步编写CI脚本更方便，博主把<code>themes\stun\_config.yml</code>文件移到了<code>source\_posts\_data</code>文件夹下，并更名为<code>stun.yml</code>，由于博主本人在配置主题时改动了原始主题的翻译文件，拷贝一份修改好的<code>themes/stun/languages/zh-CN.yml</code>到当前Hexo项目目录备用。最后结果长这样：</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── _config.yml</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json</span><br><span class="line">├── source</span><br><span class="line">│   └── _posts</span><br><span class="line">│       ├── _data</span><br><span class="line">│       │   └── stun.yml</span><br><span class="line">│       └── hello-world.md</span><br><span class="line">└── zh-CN.yml</span><br></pre></td></tr></table></div></figure>
+<p>新增<code>.github\workflows\publish.yml</code>，写一个自动安装hexo并生成网页发布的脚本：</p>
+<figure class="highlight yml"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">publish:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">fetch-depth:</span> <span class="string">&quot;0&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&quot;16&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/liuyib/hexo-theme-stun.git</span> <span class="string">themes/stun</span> <span class="comment"># 安装主题</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">mv</span> <span class="string">source/_data/sutn.yml</span> <span class="string">themes/stun/_config.yml</span> <span class="string">-f</span> <span class="comment"># 还原主题配置文件</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">mv</span> <span class="string">zh-CN.yml</span> <span class="string">themes/stun/languages/zh-CN.yml</span> <span class="string">-f</span> <span class="comment"># 还原主题翻译文件</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span> <span class="comment"># 生成静态网页</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="comment"># 自动部署</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.DEPLOY_KEY</span> <span class="string">&#125;&#125;</span> <span class="comment"># 此处的DEPLOY_KEY需要申请token，详见action说明</span></span><br><span class="line">          <span class="attr">external_repository:</span> <span class="string">xizeyoupan/xizeyoupan.github.io</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">master</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></div></figure>
+<p>把这个Hexo项目上传到github，理论上就能自动部署了。<br>
+如果要在本地预览，还需要一个小脚本：</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line">CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(CURRENT_PATH, <span class="string">&#x27;themes&#x27;</span>, <span class="string">&#x27;stun&#x27;</span>)):</span><br><span class="line">    out = subprocess.check_output(<span class="string">&#x27;git clone https://github.com/xizeyoupan/hexo-theme-stun.git themes/stun&#x27;</span>,</span><br><span class="line">                                  cwd=CURRENT_PATH, shell=<span class="literal">True</span>)</span><br><span class="line">    <span class="built_in">print</span>(out.decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">    out = subprocess.check_output(<span class="string">&#x27;npm install&#x27;</span>, cwd=CURRENT_PATH, shell=<span class="literal">True</span>)</span><br><span class="line">    <span class="built_in">print</span>(out.decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">shutil.copyfile(os.path.join(CURRENT_PATH, <span class="string">&#x27;source/_data/sutn.yml&#x27;</span>),</span><br><span class="line">                os.path.join(CURRENT_PATH, <span class="string">&#x27;themes/stun/_config.yml&#x27;</span>))</span><br><span class="line">shutil.copyfile(os.path.join(CURRENT_PATH, <span class="string">&#x27;zh-CN.yml&#x27;</span>),</span><br><span class="line">                os.path.join(CURRENT_PATH, <span class="string">&#x27;themes/stun/languages/zh-CN.yml&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    subprocess.call(<span class="string">&#x27;npm run server&#x27;</span>, cwd=CURRENT_PATH, shell=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">    os.remove(os.path.join(CURRENT_PATH, <span class="string">&#x27;db.json&#x27;</span>))</span><br></pre></td></tr></table></div></figure>
+
+        <h2 id="进阶"   >
+          <a href="#进阶" class="heading-link"><i class="fas fa-link"></i></a>进阶</h2>
+      
+
+        <h3 id="安装插件"   >
+          <a href="#安装插件" class="heading-link"><i class="fas fa-link"></i></a>安装插件</h3>
+      
+<p>如果你对主题提供的功能不满意，往往可以自己添加恰当的插件，在Hexo项目目录用npm安装，配置可以写在站点配置的<code>_config.yml</code>中。<br>
+以下是我个人安装的一些插件：</p>
+<ul>
+<li>hexo-filter-mathjax ：如果你不想用一些renderer操纵数学公式，用这个。</li>
+<li>hexo-generator-feed ：生成RSS。</li>
+<li>hexo-generator-sitemap ：生成sitemap。</li>
+<li>hexo-helper-live2d ：live2d插件，虽然archived了但是能用就行。</li>
+</ul>
+
+        <h3 id="修改代码"   >
+          <a href="#修改代码" class="heading-link"><i class="fas fa-link"></i></a>修改代码</h3>
+      
+<p>如果你对主题仍不满意或想要的功能没有插件支持，可以考虑fork一份并自行修改相关代码。如果你的功能非常完善，还可以提一个PR。</p>
+
+        <h4 id="添加音乐播放器"   >
+          <a href="#添加音乐播放器" class="heading-link"><i class="fas fa-link"></i></a>添加音乐播放器</h4>
+      
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS" >MetingJS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>是由大佬们搞的一个音乐播放前端插件。<br>
+想要在每个页面都添加一个迷你播放器，可以添加<code>themes/stun/layout/_partials/widgets/MetingJS.pug</code>，内容为</p>
+<figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">link</span>(</span><br><span class="line">    rel=<span class="string">&quot;stylesheet&quot;</span> </span><br><span class="line">    href=<span class="string">&quot;https://unpkg.com/aplayer/dist/APlayer.min.css&quot;</span></span><br><span class="line">) </span><br><span class="line"><span class="title function_">script</span>(src=<span class="string">&quot;https://unpkg.com/aplayer/dist/APlayer.min.js&quot;</span>)</span><br><span class="line"><span class="title function_">script</span>(src=<span class="string">&quot;https://unpkg.com/meting@2/dist/Meting.min.js&quot;</span>)</span><br><span class="line"></span><br><span class="line">meting-<span class="title function_">js</span>(</span><br><span class="line">    server=<span class="string">&quot;netease&quot;</span></span><br><span class="line">    type=<span class="string">&quot;playlist&quot;</span></span><br><span class="line">    id=<span class="string">&quot;歌单id&quot;</span></span><br><span class="line">    fixed=<span class="string">&quot;true&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></div></figure>
+<p>接着修改<code>themes/stun/layout/_partials/head/head.pug</code>，在最后插入<code>include ../widgets/MetingJS.pug</code>即可。</p>
+
+        <h2 id="进阶的进阶"   >
+          <a href="#进阶的进阶" class="heading-link"><i class="fas fa-link"></i></a>进阶的进阶</h2>
+      
+
+        <h3 id="提个PR"   >
+          <a href="#提个PR" class="heading-link"><i class="fas fa-link"></i></a>提个PR</h3>
+      
+<p>如果主题或者框架有问题，可以尝试自行修改。比如本人在此主题使用中确实发现<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/liuyib/hexo-theme-stun/issues/246" >有问题</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，于是就提了个PR。虽然但这个问题严格来说不是bug，但在性能开销不大的前提下还是选择质量比较好。</p>
+
+        <h3 id="自动图片压缩"   >
+          <a href="#自动图片压缩" class="heading-link"><i class="fas fa-link"></i></a>自动图片压缩</h3>
+      
+<p>本博客使用<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.ucloud.cn" >ucloud</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>存储图片，同时在相应目录<code>source/assets</code>下本地也存有一份。当图片很大时，需要进行压缩。不然非常影响浏览体验，如下图。</p>
+<p>
+        <img   class="lazyload lazyload-gif"
+          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/4.jpg"  alt="">
+      </p>
+<p>大概只有博主这么耐心的人才会耐着性子等15秒来加载一张不是lazy-load的图片——抛开美观不谈<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，让这种图片在首页加载着实让人心急。我们当然可以手动压缩然后上传到COS，当然也可以用类似picgo的插件<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>，但过程比较繁琐。所以这里我们用<code>squoosh/cli</code>，配合脚本来实现自动压缩并上传。那么我们在写md时遇到把图片等资源文件放到<code>source\assets</code>目录下，由于hexo会把<code>source</code>文件夹下的内容放到网站主目录，引用链接时只需要去掉相对目录的<code>source</code>就行了。由于代码太烂这里就不放了。</p>
+
+        <h2 id="总结-2"   >
+          <a href="#总结-2" class="heading-link"><i class="fas fa-link"></i></a>总结</h2>
+      
+<p>所以江南哥和小晗的blog啥时候能搭完呢？</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>
+        <img     class="lazyload lazyload-gif"
+          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/1.jpg?show=inline"  style="display: inline-block;"  alt="">
+       <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>
+        <img     class="lazyload lazyload-gif"
+          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/2.jpg?show=inline"  style="display: inline-block;"  alt="">
+       在此澄清一下，博主对于这种行为深恶痛绝。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>
+        <img     class="lazyload lazyload-gif"
+          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220223/3.jpg?show=inline"  style="display: inline-block;"  alt="">
+       <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://jikipedia.com/definition/805213546" >抛开xx不谈</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><a href="/2021/08/19/2021-08-19-dev-a-new-picgo-plugin/" title="具体看这里">具体看这里</a>
+ <a href="#fnref5" class="footnote-backref">↩︎</a></li>
+</ol>
+</section>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/blog/">blog</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/github-action/">github action</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/CI/">CI</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.2333332.xyz/tags/Vercel/">Vercel</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/10/03/2021-10-03-2021-october/"><span class="paginator-prev__text">2021国庆</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="waline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80-2"><span class="toc-number">1.</span> <span class="toc-text">
+          前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">
+          环境要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-number">3.</span> <span class="toc-text">
+          先前准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E5%87%8F%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B9%B6%E7%BC%96%E5%86%99action%E8%84%9A%E6%9C%AC"><span class="toc-number">4.</span> <span class="toc-text">
+          删减文件夹并编写action脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-number">5.</span> <span class="toc-text">
+          进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">
+          安装插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81"><span class="toc-number">5.2.</span> <span class="toc-text">
+          修改代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          添加音乐播放器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E7%9A%84%E8%BF%9B%E9%98%B6"><span class="toc-number">6.</span> <span class="toc-text">
+          进阶的进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%B8%AAPR"><span class="toc-number">6.1.</span> <span class="toc-text">
+          提个PR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9"><span class="toc-number">6.2.</span> <span class="toc-text">
+          自动图片压缩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-number">7.</span> <span class="toc-text">
+          总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://xjc.cn-sh2.ufileos.com/assets/site/icon.png" alt="avatar"></div><p class="sidebar-ov-author__text">Be yourself.</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/xizeyoupan" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://steamcommunity.com/profiles/76561198427207841" target="_blank" rel="noopener" data-popover="Steam" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-steam"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">13</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">24</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Krypton</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.0.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://unpkg.com/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://unpkg.com/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://unpkg.com/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://unpkg.com/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);
+
+function safeOpenUrl(url) {
+  var newTab = window.open();
+  newTab.opener = null;
+  newTab.location = url;
+}
+
+function extSearch(engine) {
+  var engines = {
+    google: 'https://www.google.com/search?q=',
+    bing: 'https://cn.bing.com/search?q=',
+    baidu: 'https://www.baidu.com/s?ie=UTF-8&wd=',
+  };
+  var host = window.location.host;
+  var query = $('.search-input input').val().toLowerCase().trim();
+  var uri = engines[engine] + query + ' site:' + host;
+
+  if (query) {
+    safeOpenUrl(uri);
+  } else {
+    Stun.utils.popAlert('warning', '请输入字符');
+  }
+}
+
+var assistSearchList = window.CONFIG.assistSearch;
+
+if (Array.isArray(assistSearchList)) {
+  assistSearchList.forEach(function (name) {
+    document.querySelector('.search-btns-item--' + name).addEventListener('click', function () {
+      extSearch(name);
+    }, false);
+  });
+}</script><script src="https://unpkg.com/pjax@latest/pjax.min.js"></script><script>window.addEventListener('DOMContentLoaded', function () {
+  var pjax = new Pjax({"selectors":["head title","#main",".pjax-reload",".header-inner"],"history":true,"scrollTo":false,"scrollRestoration":false,"cacheBust":false,"debug":false,"currentUrlFullReload":false,"timeout":0});
+  // 加载进度条的计时器
+  var loadingTimer = null;
+
+  // 重置页面 Y 方向上的滚动偏移量
+  document.addEventListener('pjax:send', function () {
+    $('.header-nav-menu').removeClass('show');
+    if (CONFIG.pjax && CONFIG.pjax.avoidBanner) {
+      $('html').velocity('scroll', {
+        duration: 500,
+        offset: $('#header').height(),
+        easing: 'easeInOutCubic'
+      });
+    }
+
+    var loadingBarWidth = 20;
+    var MAX_LOADING_WIDTH = 95;
+
+    $('.loading-bar').addClass('loading');
+    $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    clearInterval(loadingTimer);
+    loadingTimer = setInterval(function () {
+      loadingBarWidth += 3;
+      if (loadingBarWidth > MAX_LOADING_WIDTH) {
+        loadingBarWidth = MAX_LOADING_WIDTH;
+      }
+      $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    }, 500);
+  }, false);
+
+  window.addEventListener('pjax:complete', function () {
+    clearInterval(loadingTimer);
+    $('.loading-bar__progress').css('width', '100%');
+    $('.loading-bar').removeClass('loading');
+    setTimeout(function () {
+      $('.loading-bar__progress').css('width', '0');
+    }, 400);
+    $('link[rel=prefetch], script[data-pjax-rm]').each(function () {
+      $(this).remove();
+    });
+    $('script[data-pjax], #pjax-reload script').each(function () {
+      $(this).parent().append($(this).remove());
+    });
+
+    if (Stun.utils.pjaxReloadBoot) {
+      Stun.utils.pjaxReloadBoot();
+    }
+    if (Stun.utils.pjaxReloadScroll) {
+      Stun.utils.pjaxReloadScroll();
+    }
+    if (Stun.utils.pjaxReloadSidebar) {
+      Stun.utils.pjaxReloadSidebar();
+    }
+    if (true) {
+      if (Stun.utils.pjaxReloadHeader) {
+        Stun.utils.pjaxReloadHeader();
+      }
+      if (Stun.utils.pjaxReloadScrollIcon) {
+        Stun.utils.pjaxReloadScrollIcon();
+      }
+      if (Stun.utils.pjaxReloadLocalSearch) {
+        Stun.utils.pjaxReloadLocalSearch();
+      }
+    }
+  }, false);
+}, false);</script><div id="pjax-reload"></div><script src="https://unpkg.com/@waline/client/dist/Waline.min.js"></script><script data-pjax="">function loadWaline () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+
+  new Waline({
+    el: '#waline-container',
+    serverURL: 'https://waline-api-henna.vercel.app',
+    placeholder: 'Just go go, 邮箱不会公开',
+    pageSize: '10' || 10,
+    lang: '' || 'zh-cn',
+    visitor: location.hostname!=='localhost' && true,
+    avatar: 'mp',
+    path: window.location.pathname,
+    meta: guest_info
+  });
+}
+
+if (true) {
+  loadWaline();
+} else {
+  window.addEventListener('DOMContentLoaded', loadWaline, false);
+}</script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script><script type="application/json" src="/search.json"></script><script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"jsonPath":"https://unpkg.com/live2d-widget-model-mashiro-seifuku@1.0.1/assets/seifuku.model.json"},"display":{"position":"right","width":240,"height":480,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body></html>
