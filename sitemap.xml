@@ -38,15 +38,6 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/about/index.html</loc>
-    
-    <lastmod>2022-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.2333332.xyz/categories/index.html</loc>
     
     <lastmod>2022-03-01</lastmod>
@@ -74,9 +65,9 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/2022/02/25/2022-02-25-backup-shiqiaoyehua/</loc>
+    <loc>https://blog.2333332.xyz/about/index.html</loc>
     
-    <lastmod>2022-02-25</lastmod>
+    <lastmod>2022-03-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
