@@ -6,7 +6,7 @@
   <link href="https://blog.2333332.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2022-02-25T23:02:08.000Z</updated>
+  <updated>2022-03-01T23:06:08.000Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,102 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用钉钉来进行FineReport打卡是否搞错了什么</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</id>
+    <published>2022-03-01T23:06:08.000Z</published>
+    <updated>2022-03-01T23:06:08.000Z</updated>
+    
+    
+    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="OpenWrt" scheme="https://blog.2333332.xyz/tags/OpenWrt/"/>
+    
+    <category term="多播" scheme="https://blog.2333332.xyz/tags/%E5%A4%9A%E6%92%AD/"/>
+    
+    <category term="计算机网络" scheme="https://blog.2333332.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我突然想起来五年前买过8266这件事</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/</id>
+    <published>2022-03-01T23:04:08.000Z</published>
+    <updated>2022-03-01T23:04:08.000Z</updated>
+    
+    
+    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="ESP8266" scheme="https://blog.2333332.xyz/tags/ESP8266/"/>
+    
+    <category term="IoT" scheme="https://blog.2333332.xyz/tags/IoT/"/>
+    
+    <category term="MQTT" scheme="https://blog.2333332.xyz/tags/MQTT/"/>
+    
+    <category term="模电数电" scheme="https://blog.2333332.xyz/tags/%E6%A8%A1%E7%94%B5%E6%95%B0%E7%94%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三十块SC的两倍，会不会是你离视奸哥的距离？</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xx/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xx/</id>
+    <published>2022-03-01T23:03:08.000Z</published>
+    <updated>2022-03-01T23:03:08.000Z</updated>
+    
+    
+    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="SDR" scheme="https://blog.2333332.xyz/tags/SDR/"/>
+    
+    <category term="无线电" scheme="https://blog.2333332.xyz/tags/%E6%97%A0%E7%BA%BF%E7%94%B5/"/>
+    
+    <category term="抓包" scheme="https://blog.2333332.xyz/tags/%E6%8A%93%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年终总结</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-x/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-x/</id>
+    <published>2022-03-01T23:02:08.000Z</published>
+    <updated>2022-03-01T23:02:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我会。</p>]]></content>
+    
+    
+    <summary type="html">你的年终总结如果写了一个季度也没写好，你还会尝试继续写并发表出来吗?</summary>
+    
+    
+    
+    <category term="living" scheme="https://blog.2333332.xyz/categories/living/"/>
+    
+    
+    <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="年终总结" scheme="https://blog.2333332.xyz/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>石桥夜话</title>
@@ -84,8 +180,6 @@
     
     
     <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
@@ -164,8 +258,6 @@
     
     <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
     <category term="gal" scheme="https://blog.2333332.xyz/tags/gal/"/>
@@ -235,9 +327,9 @@
     
     <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="年终总结" scheme="https://blog.2333332.xyz/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -309,8 +401,6 @@
     
     
     <category term="生活" scheme="https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="总结" scheme="https://blog.2333332.xyz/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="随笔" scheme="https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
     
