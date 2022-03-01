@@ -6,7 +6,7 @@
   <link href="https://blog.2333332.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2022-03-01T23:06:08.000Z</updated>
+  <updated>2022-03-01T23:09:08.000Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -17,34 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>用钉钉来进行FineReport打卡是否搞错了什么</title>
-    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/"/>
-    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</id>
-    <published>2022-03-01T23:06:08.000Z</published>
-    <updated>2022-03-01T23:06:08.000Z</updated>
-    
-    
-    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
-    
-    
-    
-    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
-    
-    
-    <category term="OpenWrt" scheme="https://blog.2333332.xyz/tags/OpenWrt/"/>
-    
-    <category term="多播" scheme="https://blog.2333332.xyz/tags/%E5%A4%9A%E6%92%AD/"/>
-    
-    <category term="计算机网络" scheme="https://blog.2333332.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于我突然想起来五年前买过8266这件事</title>
     <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/"/>
     <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/</id>
-    <published>2022-03-01T23:04:08.000Z</published>
-    <updated>2022-03-01T23:04:08.000Z</updated>
+    <published>2022-03-01T23:09:08.000Z</published>
+    <updated>2022-03-01T23:09:08.000Z</updated>
     
     
     <summary type="html">几篇博客同时施工，不一定更新哟</summary>
@@ -61,6 +38,52 @@
     <category term="MQTT" scheme="https://blog.2333332.xyz/tags/MQTT/"/>
     
     <category term="模电数电" scheme="https://blog.2333332.xyz/tags/%E6%A8%A1%E7%94%B5%E6%95%B0%E7%94%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用钉钉来进行FineReport打卡是否搞错了什么</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxxx/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxxx/</id>
+    <published>2022-03-01T23:06:08.000Z</published>
+    <updated>2022-03-01T23:06:08.000Z</updated>
+    
+    
+    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="CI" scheme="https://blog.2333332.xyz/tags/CI/"/>
+    
+    <category term="水文" scheme="https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>经典受不了——学习《计网》中的宽带接入技术</title>
+    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/"/>
+    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</id>
+    <published>2022-03-01T23:05:08.000Z</published>
+    <updated>2022-03-01T23:05:08.000Z</updated>
+    
+    
+    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="OpenWrt" scheme="https://blog.2333332.xyz/tags/OpenWrt/"/>
+    
+    <category term="多播" scheme="https://blog.2333332.xyz/tags/%E5%A4%9A%E6%92%AD/"/>
+    
+    <category term="计算机网络" scheme="https://blog.2333332.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="校园网" scheme="https://blog.2333332.xyz/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/"/>
     
   </entry>
   

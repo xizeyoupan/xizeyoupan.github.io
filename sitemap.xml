@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</loc>
+    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/</loc>
     
     <lastmod>2022-03-01</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxx/</loc>
+    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxxx/</loc>
+    
+    <lastmod>2022-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</loc>
     
     <lastmod>2022-03-01</lastmod>
     
@@ -30,6 +39,15 @@
   
   <url>
     <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-x/</loc>
+    
+    <lastmod>2022-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/about/index.html</loc>
     
     <lastmod>2022-03-01</lastmod>
     
@@ -57,15 +75,6 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/index.html</loc>
-    
-    <lastmod>2022-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/about/index.html</loc>
     
     <lastmod>2022-03-01</lastmod>
     
@@ -432,6 +441,20 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2022-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
+    <lastmod>2022-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/</loc>
     <lastmod>2022-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
