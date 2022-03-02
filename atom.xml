@@ -6,7 +6,7 @@
   <link href="https://blog.2333332.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2022-03-01T23:09:08.000Z</updated>
+  <updated>2022-03-02T22:06:08.000Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用钉钉来进行FineReport打卡是否搞错了什么</title>
+    <link href="https://blog.2333332.xyz/2022/03/02/2022-03-02-punch-with-script/"/>
+    <id>https://blog.2333332.xyz/2022/03/02/2022-03-02-punch-with-script/</id>
+    <published>2022-03-02T22:06:08.000Z</published>
+    <updated>2022-03-02T22:06:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner：<span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/96633231" >https://www.pixiv.net/artworks/96633231</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h2 id="前言-3"   >          <a href="#前言-3" class="heading-link"><i class="fas fa-link"></i></a>前言</h2>      <p>过去的整个寒假无所事事，饱食终日，正如整个流水帐似的2021年。寒假里，起床的动机仅仅是因为要打卡——每天上午12点前截至。于是一个个上午就在睡梦中掠过了。返校后，我的作息才稍微这么阳间了一点——一礼拜四节早八，说多不多，说少不少。可还是要打卡。</p><p>提醒打卡并@没打卡的同学，是班委每天都会做的事。 <s>（或许用QQ机器人会更方便点</s> 虽然每天早上10点后如果还没打卡，钉钉会自动推送一条通知，但以我为数不多迟打卡的经历来看，这既不保险，也不好用——寒假里没提醒；就算开学了有提醒，在不开FCM的情况下，多半收不到。</p><p>自动化打卡，之前早就想做了，但是每天耗费的时间不到一分钟，使我有了懒惰之心。但是最近拜读了一篇文章<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，使我的思想有了本质上的提高。是啊，“人生在勤，勤则不匮”，说的多么好啊！恰好某天班群里也发了几句揶揄的消息，我决定浅试一下吧。<br>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/2.jpg"  alt="">      </p>        <h2 id="正文-2"   >          <a href="#正文-2" class="heading-link"><i class="fas fa-link"></i></a>正文</h2>      <p>说实话，我一直对为什么要在钉钉中打卡很疑惑。填报系统是帆软——给人的第一印象是又重又慢。虽然钉钉可以单点登录，但我平时还是选择用浏览器手动登录——钉钉的跳转太慢了。</p><p>有一说一对于这种简单的需求，理论上用puppeteer随便搞搞应该很好过。但由于我勇于挑战自我<span class="mask">脑子不太好使</span>，因此决定自己分析看看。</p>        <h3 id="认证"   >          <a href="#认证" class="heading-link"><i class="fas fa-link"></i></a>认证</h3>      <p>直接复制链接到浏览器打开，会自动跳转到一个登录页面。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/3.jpg"  alt="">      </p><p>我们废话不多说，直接抓个包看看：<br>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/4.jpg"  alt="">      </p><p>哈哈，除了<code>username</code>是学号之外，其它一个都不认识捏。看下源码：</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/5.jpg"  alt="">      </p><p>哈哈，这下post的五个请求参数就只剩一个密码了捏。结合登录按钮上的<code>login()</code>函数，博主有理由怀疑加密逻辑写在js里。于是经过我精谨细腻<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>的逆向<span class="mask">（其实是疯狂Ctrl+F）</span>，没花多少时间就确定相关逻辑在<code>login.js</code>中：</p><figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">login</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="keyword">var</span> username = <span class="title function_">jQuery</span>(<span class="string">&quot;#username&quot;</span>).<span class="title function_">val</span>();</span><br><span class="line"><span class="keyword">var</span> password = <span class="title function_">jQuery</span>(<span class="string">&quot;#password&quot;</span>).<span class="title function_">val</span>();</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">null</span> == username || <span class="string">&#x27;&#x27;</span> == username || <span class="literal">null</span> == password || <span class="string">&#x27;&#x27;</span> == password)&#123;</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="string">&quot;#msg&quot;</span>).<span class="title function_">html</span>(<span class="string">&#x27;用户名或密码不能为空!&#x27;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">password = <span class="title class_">Encrypt</span>(password);</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="string">&quot;[name=&#x27;password&#x27;]&quot;</span>).<span class="title function_">val</span>(password);</span><br><span class="line"><span class="keyword">var</span> s = <span class="title function_">jQuery</span>(<span class="string">&quot;#veriyCode&quot;</span>).<span class="title function_">size</span>();</span><br><span class="line"><span class="keyword">if</span>(s == <span class="number">1</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> vCode = <span class="title function_">jQuery</span>(<span class="string">&quot;#veriyCode&quot;</span>).<span class="title function_">val</span>();</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">null</span> === vCode || <span class="string">&#x27;&#x27;</span>===vCode || vCode.<span class="property">length</span> !=<span class="number">4</span>)&#123;</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="string">&quot;#msg&quot;</span>).<span class="title function_">html</span>(<span class="string">&#x27;请输入正确的验证码!&#x27;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">jQuery</span>(<span class="string">&quot;#fm1&quot;</span>).<span class="title function_">submit</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Encrypt</span>(<span class="params">word</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(aes1);</span><br><span class="line"><span class="keyword">var</span> iv  = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(akey);</span><br><span class="line">    srcs = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(word);</span><br><span class="line">    <span class="keyword">var</span> encrypted = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">encrypt</span>(srcs, key, &#123; <span class="attr">iv</span>: iv,<span class="attr">mode</span>:<span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">CBC</span>,<span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>&#125;);</span><br><span class="line">    <span class="keyword">return</span> encrypted.<span class="property">ciphertext</span>.<span class="title function_">toString</span>().<span class="title function_">toUpperCase</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure><p>我怀着忐忑不安的心情仔细研究了这段代码，却不知不觉入了迷。回过神来，心中却早已对这位未曾谋面的作者佩服得五体投地：</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/6.jpg"  alt="">      </p><p>这自由的声明，这恣意的缩进，会不会让你想起那个只会复制粘贴的自己？</p><p>定了定神，接下来找<code>aes1</code>和<code>akey</code>。不然为什么要佩服作者呢，因为做人就该堂堂正正。变量如其名，<code>aes1</code>就躺在<code>aes.js</code>里。而<code>akey</code>呢？一开始我是迷惑不解的，<span class="mask">直到上批站看了几集切片才豁然开朗——就如同Asoul的一个魂，这里的akey指的就是一把钥匙</span>。把一把钥匙放在<code>jquery-1.8.3.min.js</code>里，很新奇，从未见过，却又十分浪漫。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/7.jpg"  alt="">      <br>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/220302/8.jpg"  alt="">      </p><p>那么一切都能解释通了：虽然这两个变量都用明文存储，对加密毫无帮助，但著名的V学家孙哥<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>早就下过断论：A/什么事都干的出来。大概是受到“夹心糖屁用没有的刺激”，为了显示自己是很厉害的人，所以才加了这两个屁用没有的东西吧。夹心糖真的…我真的哭死/(ㄒoㄒ)/~~</p><p>loading…</p><style>    span.mask {        transition: 1.25s;        filter: blur(0.25em);    }    span.mask:hover {        filter: none;    }</style><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><span class="exturl"><a class="exturl__link"   href="http://cpc.people.com.cn/n1/2016/0430/c64094-28316364.html" >习近平：在知识分子、劳动模范、青年代表座谈会上的讲话</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><span class="exturl"><a class="exturl__link"   href="https://news.cctv.com/2019/04/27/ARTIZBWl2M41rQxABYSUIaIr190427.shtml" >以创新理念，绘制精谨细腻“工笔画”</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><span class="exturl"><a class="exturl__link"   href="https://quantum818.github.io/2022/01/31/2022-1-31/" >管人害人，远离管人至少能延长二十年寿命</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+    
+    
+    <summary type="html">每天通知群里的的“打卡”是什么意思？</summary>
+    
+    
+    
+    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
+    
+    
+    <category term="python" scheme="https://blog.2333332.xyz/tags/python/"/>
+    
+    <category term="CI" scheme="https://blog.2333332.xyz/tags/CI/"/>
+    
+    <category term="抓包" scheme="https://blog.2333332.xyz/tags/%E6%8A%93%E5%8C%85/"/>
+    
+    <category term="水文" scheme="https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>关于我突然想起来五年前买过8266这件事</title>
@@ -63,27 +90,6 @@
   </entry>
   
   <entry>
-    <title>用钉钉来进行FineReport打卡是否搞错了什么</title>
-    <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxxx/"/>
-    <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxxx/</id>
-    <published>2022-03-01T23:06:08.000Z</published>
-    <updated>2022-03-01T23:06:08.000Z</updated>
-    
-    
-    <summary type="html">几篇博客同时施工，不一定更新哟</summary>
-    
-    
-    
-    <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
-    
-    
-    <category term="CI" scheme="https://blog.2333332.xyz/tags/CI/"/>
-    
-    <category term="水文" scheme="https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>经典受不了——学习《计网》中的宽带接入技术</title>
     <link href="https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/"/>
     <id>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xxxx/</id>
@@ -123,11 +129,11 @@
     <category term="technology" scheme="https://blog.2333332.xyz/categories/technology/"/>
     
     
+    <category term="抓包" scheme="https://blog.2333332.xyz/tags/%E6%8A%93%E5%8C%85/"/>
+    
     <category term="SDR" scheme="https://blog.2333332.xyz/tags/SDR/"/>
     
     <category term="无线电" scheme="https://blog.2333332.xyz/tags/%E6%97%A0%E7%BA%BF%E7%94%B5/"/>
-    
-    <category term="抓包" scheme="https://blog.2333332.xyz/tags/%E6%8A%93%E5%8C%85/"/>
     
   </entry>
   
