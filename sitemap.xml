@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.2333332.xyz/2022/03/02/2022-03-02-punch-with-script/</loc>
+    <loc>https://blog.2333332.xyz/2022/03/15/2022-03-15-review-2022/</loc>
     
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/2022/02/23/2022-02-23-write-blog-with-ci/</loc>
+    
+    <lastmod>2022-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,7 @@
   <url>
     <loc>https://blog.2333332.xyz/categories/index.html</loc>
     
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +31,7 @@
   <url>
     <loc>https://blog.2333332.xyz/friends/index.html</loc>
     
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,7 @@
   <url>
     <loc>https://blog.2333332.xyz/tags/index.html</loc>
     
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +49,16 @@
   <url>
     <loc>https://blog.2333332.xyz/about/index.html</loc>
     
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/2022/03/02/2022-03-02-punch-with-script/</loc>
+    
+    <lastmod>2022-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -77,24 +95,6 @@
     <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-xx/</loc>
     
     <lastmod>2022-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/2022/03/01/2022-xx-xx-x/</loc>
-    
-    <lastmod>2022-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/2022/02/23/2022-02-23-write-blog-with-ci/</loc>
-    
-    <lastmod>2022-02-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -211,7 +211,7 @@
 
   <url>
     <loc>https://blog.2333332.xyz/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -219,259 +219,259 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/blog/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/test/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/WSL/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/linux/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/parsec/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E4%B8%B2%E6%B5%81/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E8%BF%9C%E7%A8%8B/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E4%B9%A6%E8%AF%84/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/miner/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/bitcoin/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/music/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/gal/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/python/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/javascript/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/npm/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/picgo/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/github-action/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/CI/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/Vercel/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%8A%93%E5%8C%85/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/SDR/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%97%A0%E7%BA%BF%E7%94%B5/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/ESP8266/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/IoT/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/MQTT/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%A8%A1%E7%94%B5%E6%95%B0%E7%94%B5/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/OpenWrt/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E5%A4%9A%E6%92%AD/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/tags/CSGO/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -480,14 +480,14 @@
   
   <url>
     <loc>https://blog.2333332.xyz/categories/technology/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.2333332.xyz/categories/living/</loc>
-    <lastmod>2022-03-02</lastmod>
+    <lastmod>2022-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
