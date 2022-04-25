@@ -466,7 +466,7 @@ if (Array.isArray(assistSearchList)) {
       }
     }
   }, false);
-}, false);</script><div id="pjax-reload"></div><script src="https://unpkg.com/@waline/client@2.0.1/dist/waline.js"></script><script data-pjax="">function loadWaline () {
+}, false);</script><div id="pjax-reload"></div><script src="https://unpkg.com/@waline/client@1.6.0/dist/Waline.min.js"></script><script data-pjax="">function loadWaline () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
@@ -474,7 +474,7 @@ if (Array.isArray(assistSearchList)) {
     return GUEST_INFO.indexOf(item) > -1;
   });
 
-  new Waline({
+  Waline({
     el: '#waline-container',
     serverURL: 'https://waline-api-henna.vercel.app',
     placeholder: 'Just go go, 邮箱不会公开',
