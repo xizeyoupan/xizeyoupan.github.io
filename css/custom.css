@@ -1,0 +1,8 @@
+.ma-blur {
+    transition: 1.25s;
+    filter: blur(0.25em);
+}
+
+.ma-blur:hover {
+    filter: none;
+}
