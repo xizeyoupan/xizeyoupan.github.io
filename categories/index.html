@@ -5,8 +5,8 @@
 <meta property="og:site_name" content="Krypton&#39;s Blog">
 <meta property="og:description" content="Lost time is never found again.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-29T03:34:21.574Z">
-<meta property="article:modified_time" content="2023-03-29T03:34:21.574Z">
+<meta property="article:published_time" content="2023-03-29T04:47:20.142Z">
+<meta property="article:modified_time" content="2023-03-29T04:47:20.142Z">
 <meta property="article:author" content="Krypton">
 <meta property="article:tag" content="技术,闲谈,算法,二次元">
 <meta name="twitter:card" content="summary"><title>分类 | Krypton's Blog</title><link ref="canonical" href="https://blog.2333332.xyz/categories/index.html"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://unpkg.2333332.xyz"><link rel="stylesheet" href="https://unpkg.2333332.xyz/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="/css/custom.css" type="text/css"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=UA-132388937-1" async="" data-pjax=""></script><script data-pjax="">if (window.location.hostname !== 'localhost') {
@@ -383,6 +383,7 @@ if (Array.isArray(assistSearchList)) {
     }
   }, false);
 }, false);</script><div id="pjax-reload"></div><link rel="stylesheet" href="https://unpkg.2333332.xyz/@waline/client@v2/dist/waline.css"><script type="module" data-pjax="">import { init } from 'https://unpkg.2333332.xyz/@waline/client@v2/dist/waline.mjs';
+import { pageviewCount } from 'https://unpkg.com/@waline/client@v2/dist/pageview.mjs';
 
 function loadWaline () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
@@ -391,6 +392,19 @@ function loadWaline () {
   guest_info = guest_info.split(',').filter(function(item) {
     return GUEST_INFO.indexOf(item) > -1;
   });
+
+  pageviewCount({
+    serverURL: 'https://waline.2333332.xyz',
+    path: window.location.pathname,
+
+    // optional, for custom selectors, defaults to `'.waline-pageview-count'`
+    // selector: 'waline-pageview-count',
+
+    // optional, whether to increase the number of visits when fetching, the default is `true`
+    // update: true,
+  });
+
+  if(!document.getElementById('waline-container')) return
 
   init({
     el: '#waline-container',
