@@ -6,7 +6,7 @@
   <link href="https://blog.2333332.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2022-03-29T11:09:08.000Z</updated>
+  <updated>2024-03-02T11:09:08.000Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://blog.2333332.xyz/2023/03/28/2023-03-28-be-a-horopalettologist/"/>
     <id>https://blog.2333332.xyz/2023/03/28/2023-03-28-be-a-horopalettologist/</id>
     <published>2023-03-28T23:09:08.000Z</published>
-    <updated>2022-03-29T11:09:08.000Z</updated>
+    <updated>2024-03-02T11:09:08.000Z</updated>
     
-    <content type="html"><![CDATA[<p>banner: <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/96947927" >https://www.pixiv.net/artworks/96947927</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h2 id="序-5"   >          <a href="#序-5" class="heading-link"><i class="fas fa-link"></i></a>序</h2>      ]]></content>
+    <content type="html"><![CDATA[<p>banner: <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/96947927" >https://www.pixiv.net/artworks/96947927</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>        <h2 id="序-5"   >          <a href="#序-5" class="heading-link"><i class="fas fa-link"></i></a>序</h2>      <p>小时候我就喜欢拆东西。从小一点的闹钟、遥控器到大一点的音响、CD机都遭过我的毒手。毫无意外的，这些东西往往都装不回去，最后只能沦为废品。我妈为此没少打我，我却屡教不改，乐于其中。渐渐长大发后才发现这些行为很多都是小孩好奇顽皮的天性使然，我对事物运作原理并没有展现什么兴趣，更别提去学习和了解更复杂的机械原理和电子电路了。然而高中的技术选课又给了我一个重新接触电子的机会。当时高中的技术课是个新鲜玩意（估计现在也是），连老师都是从物理转过来的，每次学习和考试都有一种说不清的痛苦，唯有自己进行diy才有一点乐趣。高中毕业后好友孙工选了电子信息专业，在大一暑假一起散步时，我突发奇想说要做一个翻页时钟。现在忘了当时做翻页时钟的初心是什么了，可能单纯觉得酷吧。虽然孙工觉得这个项目太复杂，但我还是决定试试看。</p>        <h2 id="痛苦的过程"   >          <a href="#痛苦的过程" class="heading-link"><i class="fas fa-link"></i></a>痛苦的过程</h2>      <p>坦率地讲，刚高中毕业的我对电子依旧一无所知。我发现高中学的三极管和555芯片对我的项目并没有什么帮助。我不得不从头开始学习mos管、画电路图、读datasheet。由于时间跨度太大，我已经记不清在嘉立创打过几次板了。要解决的除了硬件问题，还有软件问题、机械问题和工程问题。主要的测试、想法验证大约在20年-21年，而主要的整合、拼装则在22年-23年。下面是项目的简单介绍。</p>        <h3 id="机械"   >          <a href="#机械" class="heading-link"><i class="fas fa-link"></i></a>机械</h3>      <p>如果说电子部分我还会一点，那么机械部分就是我的苦手了。好在我找到了这个项目<span class="exturl"><a class="exturl__link"   href="https://github.com/scottbez1/splitflap" >splitflap</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，这里面开源了所用的全部方案。于是我决定遵循拿来主义，复刻外观结构，而原来项目臃肿的电路和程序全部重写。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/230328/flip.gif"  alt="splitflap">      </p><p>原项目的电机线和霍尔检测线是直接拖到后面去的，不太美观。我把电机线和霍尔检测线连到图示绿色的副板上，在两侧面板上打上孔，用fpc排线连接各个副板，这样就不用拖着一堆线了。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/230328/1.jpg"  alt="demo">      </p>        <h3 id="电路"   >          <a href="#电路" class="heading-link"><i class="fas fa-link"></i></a>电路</h3>      <p>在经过好多次尝试后，我把电路板分为了电源板、主板、副板三部分。</p>        <h4 id="电源板"   >          <a href="#电源板" class="heading-link"><i class="fas fa-link"></i></a>电源板</h4>      <p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/230328/power.jpg"  alt="power">      </p><p>支持电池供电、华为口供电充电、华为口连接电脑调试、下载。</p><ul><li>DC-DC升压：HX3608，最大3.5A，提供5V电机供电。</li><li>LDO：ME6217C33M5G，最大800mA，提供3V3供电。</li><li>线性锂离子电池充电器：TP4056X，1A，缺点是发热很高。</li></ul>        <h4 id="主板"   >          <a href="#主板" class="heading-link"><i class="fas fa-link"></i></a>主板</h4>      <p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/230328/mother.jpg"  alt="mother">      </p><p>mcu选择的是esp32，方便远程控制。ULN2803A作为驱动芯片，单路500mA，两路并联作为一相1A。muc和副板上的单片机采用I2C连接，驱动电机时由mcu统一发出信号，再由副板上的单片机发出信号控制4个mos管，可以实现任意数量电机同时驱动。还有温湿度计、LED之类的我就不多说了。</p>        <h2 id="未完…"   >          <a href="#未完…" class="heading-link"><i class="fas fa-link"></i></a>未完…</h2>      ]]></content>
     
     
-    <summary type="html">关于一年前的构想至今没有进展这件事</summary>
+    <summary type="html">关于一年前的构想至今有些进展这件事</summary>
     
     
     
