@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.2333332.xyz/categories/index.html</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/index.html</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.2333332.xyz/about/index.html</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -29,7 +11,25 @@
   </url>
   
   <url>
+    <loc>https://blog.2333332.xyz/categories/index.html</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.2333332.xyz/friends/index.html</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/index.html</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -324,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/tags/Vercel/</loc>
+    <loc>https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/</loc>
     <lastmod>2024-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/tags/%E6%B0%B4%E6%96%87/</loc>
+    <loc>https://blog.2333332.xyz/tags/Vercel/</loc>
     <lastmod>2024-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
