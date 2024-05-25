@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/about/index.html</loc>
+    <loc>https://blog.2333332.xyz/categories/index.html</loc>
     
     <lastmod>2024-05-25</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/categories/index.html</loc>
+    <loc>https://blog.2333332.xyz/about/index.html</loc>
     
     <lastmod>2024-05-25</lastmod>
     
@@ -370,28 +370,7 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/tags/R69S/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.2333332.xyz/tags/PVE/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/Docker/</loc>
     <lastmod>2024-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -406,34 +385,6 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/openwrt/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/%E6%B8%85%E7%81%B0/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/gnupg/</loc>
-    <lastmod>2024-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/nas/</loc>
     <lastmod>2024-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -483,6 +434,55 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/I2C/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/R69S/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/Docker/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/%E6%B8%85%E7%81%B0/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/gnupg/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/nas/</loc>
     <lastmod>2024-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
