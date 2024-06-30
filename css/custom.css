@@ -229,7 +229,7 @@ a.bangumi-tab {
 }
 
 .bangumi-starstop {
-    background: transparent url(https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.7.9/lib/img/rate_star_2x.png);
+    background: transparent url(https://unpkg.2333332.xyz/hexo-bilibili-bangumi@1.7.9/lib/img/rate_star_2x.png);
     height: 10px;
     background-size: 10px 19.5px;
     background-position: 100% 100%;
@@ -240,7 +240,7 @@ a.bangumi-tab {
 }
 
 .bangumi-starlight {
-    background: transparent url(https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.7.9/lib/img/rate_star_2x.png);
+    background: transparent url(https://unpkg.2333332.xyz/hexo-bilibili-bangumi@1.7.9/lib/img/rate_star_2x.png);
     height: 10px;
     background-size: 10px 19.5px;
     background-position: 100% 100%;

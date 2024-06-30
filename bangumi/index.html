@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="过滤                                                                                排序                                             排序方式">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="https://xjc.cn-sh2.ufileos.com/assets/site/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="添加追剧页面，样式来自于 https:&#x2F;&#x2F;github.com&#x2F;HCLonely&#x2F;hexo-bilibili-bangumi ，纯前端实现过滤、分页，ejs字符串拼接。内存泄漏、xss可能性存疑。数据绝赞更新中。。。                         过滤">
 <meta property="og:type" content="website">
 <meta property="og:title" content="追番">
 <meta property="og:url" content="https://blog.2333332.xyz/bangumi/index.html">
 <meta property="og:site_name" content="Krypton&#39;s Blog">
-<meta property="og:description" content="过滤                                                                                排序                                             排序方式">
+<meta property="og:description" content="添加追剧页面，样式来自于 https:&#x2F;&#x2F;github.com&#x2F;HCLonely&#x2F;hexo-bilibili-bangumi ，纯前端实现过滤、分页，ejs字符串拼接。内存泄漏、xss可能性存疑。数据绝赞更新中。。。                         过滤">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-17T16:50:38.120Z">
-<meta property="article:modified_time" content="2024-06-17T16:50:38.120Z">
+<meta property="article:published_time" content="2024-06-30T15:33:12.225Z">
+<meta property="article:modified_time" content="2024-06-30T15:33:12.225Z">
 <meta property="article:author" content="Krypton">
 <meta property="article:tag" content="技术,闲谈,算法,二次元">
 <meta name="twitter:card" content="summary"><title>追番 | Krypton's Blog</title><link ref="canonical" href="https://blog.2333332.xyz/bangumi/index.html"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://unpkg.2333332.xyz"><link rel="stylesheet" href="https://unpkg.2333332.xyz/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="/css/custom.css" type="text/css"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=G-7KTM7HMP4N" async="" data-pjax=""></script><script data-pjax="">if (window.location.hostname !== 'localhost') {
@@ -38,7 +38,10 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-address-book"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">友链</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/bangumi/"><span class="header-nav-menu-item__icon"><i class="fas fa-gamepad"></i></span><span class="header-nav-menu-item__text">追剧</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Krypton's Blog</div><div class="header-banner-info__subtitle">快来扑腾的博客</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><div class="custompage"><link href="//unpkg.2333332.xyz/layui@2.9.11/dist/css/layui.css" rel="stylesheet">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-address-book"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">友链</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/bangumi/"><span class="header-nav-menu-item__icon"><i class="fas fa-gamepad"></i></span><span class="header-nav-menu-item__text">追剧</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Krypton's Blog</div><div class="header-banner-info__subtitle">快来扑腾的博客</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><div class="custompage"><br/>
+<p>添加追剧页面，样式来自于 <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi" >https://github.com/HCLonely/hexo-bilibili-bangumi</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ，纯前端实现过滤、分页，ejs字符串拼接。内存泄漏、xss可能性存疑。数据绝赞更新中。。。</p>
+<br/>
+<link href="//unpkg.2333332.xyz/layui@2.9.11/dist/css/layui.css" rel="stylesheet">
 <script src="//unpkg.2333332.xyz/layui@2.9.11/dist/layui.js"></script>
 <script src="//unpkg.2333332.xyz/ejs@3.1.10/ejs.min.js"></script>
 
@@ -102,8 +105,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></he
         justify-content: center;
     }
 </style>
-<script> window.bangumis=[{"id":428735,"title":"BanG Dream! It's MyGO!!!!!","type":"动画","cover":"https://lain.bgm.tv/pic/cover/l/e7/a7/428735_1v11n.jpg","score":8.3,"des":"「能一辈子和我搞乐队吗？」\r\n\r\n在高一的春季即将结束之时，羽丘女子学园里人人都在参加乐队活动。\r\n入学较晚的爱音，也为了尽快融入班级，急忙寻找乐队成员。\r\n在寻找时，她发现被称为「羽丘的不可思议少女」的灯还没有参加乐队，\r\n于是爱音不由得","state":"看过","collect":23977,"totalCount":"共13话","myComment":"","myStars":8,"release_date":"2023-06-29","watch_date":"2023-12"},{"id":310163,"title":"Far Cry 6","type":"游戏","cover":"https://lain.bgm.tv/pic/cover/l/9a/ea/310163_mG52b.jpg","score":6.5,"des":"欢迎来到雅拉，一个冻结在时间之中的热带天堂。作为雅拉的独裁者，安东·卡斯蒂约决心利用一切手段恢复这个国家往日的荣耀。而他的儿子迭戈，也在亦步亦趋地跟随他那沾满鲜血的脚印。他们的镇压，已经点燃了一场革命。\r\n\r\n• 扮演土生土长的雅拉人丹尼·","state":"看过","collect":224,"totalCount":"共0话","myComment":"脑袋里全是威威若","myStars":7,"release_date":"2021-10-07","watch_date":"2023-10"}] </script>
-<div class="pjax-reload">
+<script> window.bangumis=[{"id":428735,"title":"BanG Dream! It's MyGO!!!!!","type":"动画","cover":"https://lain.bgm.tv/pic/cover/l/e7/a7/428735_1v11n.jpg","score":8.3,"des":"「能一辈子和我搞乐队吗？」\r\n\r\n在高一的春季即将结束之时，羽丘女子学园里人人都在参加乐队活动。\r\n入学较晚的爱音，也为了尽快融入班级，急忙寻找乐队成员。\r\n在寻找时，她发现被称为「羽丘的不可思议少女」的灯还没有参加乐队，\r\n于是爱音不由得","state":"看过","collect":24791,"totalCount":"共13话","myComment":"","myStars":8,"release_date":"2023-06-29","watch_date":"2023-12"},{"id":310163,"title":"Far Cry 6","type":"游戏","cover":"https://lain.bgm.tv/pic/cover/l/9a/ea/310163_mG52b.jpg","score":6.5,"des":"欢迎来到雅拉，一个冻结在时间之中的热带天堂。作为雅拉的独裁者，安东·卡斯蒂约决心利用一切手段恢复这个国家往日的荣耀。而他的儿子迭戈，也在亦步亦趋地跟随他那沾满鲜血的脚印。他们的镇压，已经点燃了一场革命。\r\n\r\n• 扮演土生土长的雅拉人丹尼·","state":"看过","collect":226,"totalCount":"共0话","myComment":"脑袋里全是威威若","myStars":7,"release_date":"2021-10-07","watch_date":"2023-10"}] </script>
+<div>
     <script>
         function get_template(cover_url) {
             return `
@@ -218,16 +221,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></he
                 div.insertAdjacentHTML("beforeend", html)
             }
         }
-        layui.use(function () {
-            var form = layui.form;
-            var layer = layui.layer;
-            form.on('checkbox', apply_filter);
-            form.on('radio', apply_filter);
-        })
+        setTimeout(() => {
+            layui.use(function () {
+                var form = layui.form;
+                var layer = layui.layer;
+                form.on('checkbox', apply_filter);
+                form.on('radio', apply_filter);
+            })
+        }, 500)
         apply_filter({})
     </script>
-</div>
-</div></div><div class="comments" id="comments"><div id="waline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">
+</div></div></div><div class="comments" id="comments"><div id="waline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">
           过滤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text">
           排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">
           排序方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bangumi-data-count"><span class="toc-number">3.1.</span> <span class="toc-text">
