@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.2333332.xyz/2024/05/25/2024-05-25-esp32-magic-wand/</loc>
+    
+    <lastmod>2024-08-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.2333332.xyz/about/index.html</loc>
     
     <lastmod>2024-08-02</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/bangumi/index.html</loc>
+    <loc>https://blog.2333332.xyz/categories/index.html</loc>
     
     <lastmod>2024-08-02</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://blog.2333332.xyz/categories/index.html</loc>
+    <loc>https://blog.2333332.xyz/bangumi/index.html</loc>
     
     <lastmod>2024-08-02</lastmod>
     
@@ -50,15 +59,6 @@
     <loc>https://blog.2333332.xyz/assets/site/music/playlist.json</loc>
     
     <lastmod>2024-08-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/2024/05/25/2024-05-25-esp32-magic-wand/</loc>
-    
-    <lastmod>2024-07-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
