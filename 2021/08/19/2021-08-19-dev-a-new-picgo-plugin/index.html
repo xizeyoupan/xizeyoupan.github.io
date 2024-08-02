@@ -277,7 +277,21 @@ span.mask:hover {
     color: initial;
     text-align: initial;
 }
-</style><link rel="stylesheet" href="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.css"><script src="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.js"></script><script src="https://unpkg.2333332.xyz/@xizeyoupan/meting@latest/dist/Meting.min.js"></script><meting-js server="ytmusic" type="playlist" id="PLEqSd0CstNysjgFMnQCXoaJg9MtroKfGg" fixed="true" order="random"></meting-js></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://unpkg.2333332.xyz/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://unpkg.2333332.xyz/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
+</style><link rel="stylesheet" href="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.css"><script src="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.js"></script><script src="https://unpkg.2333332.xyz/@xizeyoupan/meting@latest/dist/Meting.min.js"></script><div id="theme-aplayer"></div><script>fetch('/assets/site/music/playlist.json')
+.then(res => res.json())
+.then(res => {
+
+    let options = {
+        audio: res,
+        mutex: true,
+        fixed : 'true',
+        order : 'random',
+        lrcType: 3,
+    }
+
+    options.container = document.getElementById('theme-aplayer')
+    const _aplayer = new APlayer(options)
+})</script></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://unpkg.2333332.xyz/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://unpkg.2333332.xyz/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 

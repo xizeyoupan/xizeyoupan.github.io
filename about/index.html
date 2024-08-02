@@ -6,7 +6,7 @@
 <meta property="og:description" content="关于我        I do not know where to go, but I have been on the road. 2020级某学校弱势CS专业在读已进厂打螺丝，坐标江浙一带。由于幼时身体孱弱，成为医院常客从而错失童年应该和其他小孩子一起玩耍的机会，却莫名对未知的东西感点兴趣。没有特别讨厌的东西，也没有特别喜欢的东西。厌倦花里胡哨，认为简单">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-15T09:05:22.000Z">
-<meta property="article:modified_time" content="2024-07-08T17:58:24.076Z">
+<meta property="article:modified_time" content="2024-08-02T10:27:49.740Z">
 <meta property="article:author" content="Krypton">
 <meta property="article:tag" content="技术,闲谈,算法,二次元">
 <meta name="twitter:card" content="summary"><title>about | Krypton's Blog</title><link ref="canonical" href="https://blog.2333332.xyz/about/index.html"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://unpkg.2333332.xyz"><link rel="stylesheet" href="https://unpkg.2333332.xyz/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="/css/custom.css" type="text/css"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=G-7KTM7HMP4N" async="" data-pjax=""></script><script data-pjax="">if (window.location.hostname !== 'localhost') {
@@ -57,7 +57,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></he
         <h2 id="博客时间线"   >
           <a href="#博客时间线" class="heading-link"><i class="fas fa-link"></i></a>博客时间线</h2>
       
-<p><strong>2024.06.17</strong> - 添加追剧页面，样式来自于 <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi" >https://github.com/HCLonely/hexo-bilibili-bangumi</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ，纯前端实现过滤、分页，ejs字符串拼接。内存泄漏、xss可能性存疑。数据绝赞更新中。。。<br>
+<p><strong>2024.08.02</strong> - 由于YouTube下载不稳定，音乐播放器由<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/xizeyoupan/Meting-API" >Meting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>源改为自定义源，COS开启防盗链。<br>
+<strong>2024.06.17</strong> - 添加追剧页面，样式来自于 <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi" >https://github.com/HCLonely/hexo-bilibili-bangumi</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ，纯前端实现过滤、分页，ejs字符串拼接。内存泄漏、xss可能性存疑。数据绝赞更新中。。。<br>
 <strong>2023.03.29</strong> - 升级waline，使用vercel对unpkg的cdn进行代理。<br>
 <strong>2023.01.29</strong> - 切换waline评论的vercel域名为自定义域名，meting配置改到主题config中。<br>
 <strong>忘了</strong> - 全线解析到vercel。<br>
@@ -89,7 +90,21 @@ span.mask:hover {
     color: initial;
     text-align: initial;
 }
-</style><link rel="stylesheet" href="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.css"><script src="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.js"></script><script src="https://unpkg.2333332.xyz/@xizeyoupan/meting@latest/dist/Meting.min.js"></script><meting-js server="ytmusic" type="playlist" id="PLEqSd0CstNysjgFMnQCXoaJg9MtroKfGg" fixed="true" order="random"></meting-js></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://unpkg.2333332.xyz/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://unpkg.2333332.xyz/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
+</style><link rel="stylesheet" href="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.css"><script src="https://unpkg.2333332.xyz/aplayer/dist/APlayer.min.js"></script><script src="https://unpkg.2333332.xyz/@xizeyoupan/meting@latest/dist/Meting.min.js"></script><div id="theme-aplayer"></div><script>fetch('/assets/site/music/playlist.json')
+.then(res => res.json())
+.then(res => {
+
+    let options = {
+        audio: res,
+        mutex: true,
+        fixed : 'true',
+        order : 'random',
+        lrcType: 3,
+    }
+
+    options.container = document.getElementById('theme-aplayer')
+    const _aplayer = new APlayer(options)
+})</script></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://unpkg.2333332.xyz/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://unpkg.2333332.xyz/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://unpkg.2333332.xyz/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
