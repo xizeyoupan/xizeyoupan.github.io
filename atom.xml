@@ -6,7 +6,7 @@
   <link href="https://blog.2333332.xyz/atom.xml" rel="self"/>
   
   <link href="https://blog.2333332.xyz/"/>
-  <updated>2024-08-02T17:09:08.000Z</updated>
+  <updated>2024-09-18T09:09:08.000Z</updated>
   <id>https://blog.2333332.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>孙哥笑传之导导号</title>
+    <link href="https://blog.2333332.xyz/2024/09/18/2024-09-18-get-suns-account/"/>
+    <id>https://blog.2333332.xyz/2024/09/18/2024-09-18-get-suns-account/</id>
+    <published>2024-09-18T09:09:08.000Z</published>
+    <updated>2024-09-18T09:09:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>banner: <span class="exturl"><a class="exturl__link"   href="https://www.pixiv.net/artworks/122371422" >https://www.pixiv.net/artworks/122371422</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p><p>今天要来介绍的是一组神人事迹。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/240918/dialog1.jpg"  alt="">      </p>        <h2 id="初见端倪"   >          <a href="#初见端倪" class="heading-link"><i class="fas fa-link"></i></a>初见端倪</h2>      <p>起因是前段日子孙神在群里表示自己steam账号被盗，并提示群友注意风险。笔者一开始并没有太多关注，毕竟有时候确实可能在不知情的情况下点开一些病毒，比如之前的<span class="exturl"><a class="exturl__link"   href="https://www.cnblogs.com/GoodFish-/p/17715977.html" >WinRAR漏洞</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。至于他说steam被撞库，这种事情根本闻所未闻。那到底是谁的问题呢？从这个描述来看，很像是本地cookie被盗导致的。而接下来的事情也很快给出了答案。</p>        <h2 id="渐入佳境"   >          <a href="#渐入佳境" class="heading-link"><i class="fas fa-link"></i></a>渐入佳境</h2>      <p>从上面的记录中可以看出，孙神虽然提醒群友的本意是好的，但十分嘴硬，善于倒打一耙。而那句“推特小号也被盗了”似乎为接下来的发展埋下了种子。某日笔者偶尔上github，发现孙神竟然上传了一个伪装成病毒的外挂仓库。这显然也是孙神口中那位“立陶宛黑客”的杰作。笔者觉得一个电信工科生被盗github，还被挂马羞辱的抽象程度，相当于小偷把派出所里的东西偷了，然后还光明正大地在派出所门口拍卖。虽然在笔者的提醒下，孙神光速删掉了这个库，但此事在<span class="exturl"><a class="exturl__link"   href="https://web.archive.org/web/20240911094307/https://github.com/quantum818/KernelCheat" >阿凯芙网站</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>上亦有记载，得以让大伙一窥该库的风采。</p>        <h2 id="彻底疯狂"   >          <a href="#彻底疯狂" class="heading-link"><i class="fas fa-link"></i></a>彻底疯狂</h2>      <p>让笔者没想到的是，大的很快来了。某日笔者又偶尔上github，发现孙神的账号给上百个病毒库点了star。到这时笔者都已经习惯了，再看到什么都不会觉得奇怪，但后续孙神的反应着实让笔者笑了一下。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/240918/dialog2.jpg"  alt="">      </p><p>能看出来，孙神的手段神通广大，连“斯拉夫黑客”都在他的手中无所遁形。当笔者提问为什么孙神对黑客这么清楚时，孙神却反而威胁要开笔者的盒。这种气急败坏的样子与他常提起《铡（音zhá，而不是cè，笔者注）美案》时乐不可支的神态形成对比，令人忍俊不禁。笔者估计大多数人在第一次steam被盗时，都会先从自己身上找原因，而不是企图精准定位所谓的“斯拉夫黑客”进行反制。但孙神显然并不这么想——2FA？就不设，你能怎么着吧。</p><p>        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://xjc.cn-sh2.ufileos.com/assets/blog/240918/2FA.jpg"  alt="">      </p><p>对于这样的心态，除了“神人”以外，笔者实在想不出其他更好的评价。</p>]]></content>
+    
+    
+    <summary type="html">本文也许发布在梨响莲馅黑枪论坛更加合适</summary>
+    
+    
+    
+    <category term="living" scheme="https://blog.2333332.xyz/categories/living/"/>
+    
+    
+    <category term="神人" scheme="https://blog.2333332.xyz/tags/%E7%A5%9E%E4%BA%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>基于ESP32的不智能手势检测系统</title>
