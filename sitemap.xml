@@ -2,43 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.2333332.xyz/2024/09/18/2024-09-18-get-suns-account/</loc>
-    
-    <lastmod>2024-09-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/investment/index.html</loc>
-    
-    <lastmod>2024-09-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/index.html</loc>
-    
-    <lastmod>2024-09-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.2333332.xyz/about/index.html</loc>
-    
-    <lastmod>2024-09-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/bangumi/index.html</loc>
     
     <lastmod>2024-09-18</lastmod>
     
@@ -56,6 +20,24 @@
   </url>
   
   <url>
+    <loc>https://blog.2333332.xyz/investment/index.html</loc>
+    
+    <lastmod>2024-09-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/bangumi/index.html</loc>
+    
+    <lastmod>2024-09-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.2333332.xyz/friends/index.html</loc>
     
     <lastmod>2024-09-18</lastmod>
@@ -65,7 +47,25 @@
   </url>
   
   <url>
+    <loc>https://blog.2333332.xyz/tags/index.html</loc>
+    
+    <lastmod>2024-09-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.2333332.xyz/assets/site/music/playlist.json</loc>
+    
+    <lastmod>2024-09-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/2024/09/18/2024-09-18-get-suns-account/</loc>
     
     <lastmod>2024-09-18</lastmod>
     
@@ -301,6 +301,13 @@
   </url>
   
   <url>
+    <loc>https://blog.2333332.xyz/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2024-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.2333332.xyz/tags/miner/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -309,13 +316,6 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/bitcoin/</loc>
-    <lastmod>2024-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2024-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
