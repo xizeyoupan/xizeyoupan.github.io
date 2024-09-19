@@ -254,20 +254,6 @@
 
   
   <url>
-    <loc>https://blog.2333332.xyz/tags/blog/</loc>
-    <lastmod>2024-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.2333332.xyz/tags/test/</loc>
-    <lastmod>2024-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.2333332.xyz/tags/WSL/</loc>
     <lastmod>2024-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -276,6 +262,20 @@
   
   <url>
     <loc>https://blog.2333332.xyz/tags/linux/</loc>
+    <lastmod>2024-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/blog/</loc>
+    <lastmod>2024-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.2333332.xyz/tags/test/</loc>
     <lastmod>2024-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
